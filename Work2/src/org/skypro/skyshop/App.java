@@ -1,16 +1,20 @@
 package org.skypro.skyshop;
 
+import org.skypro.skyshop.product.FixPriceProduct;
 import org.skypro.skyshop.basket.ProductBasket;
+import org.skypro.skyshop.product.DiscountedProduct;
+import org.skypro.skyshop.product.SimpleProduct;
 import org.skypro.skyshop.product.Product;
 
 public class App {
     public static void main(String[] args) {
-        Product product1 = new Product("Хлеб", 62);
-        Product product2 = new Product("Молоко", 91);
-        Product product3 = new Product("Сыр", 255);
-        Product product4 = new Product("Яблоко", 80);
-        Product product5 = new Product("Кофе", 350);
-        Product product6 = new Product("Чай", 170);
+        SimpleProduct product1 = new SimpleProduct("Хлеб", 62);
+        SimpleProduct product2 = new SimpleProduct("Молоко", 91);
+        DiscountedProduct product3 = new DiscountedProduct("Сыр", 255, 20);
+        SimpleProduct product4 = new SimpleProduct("Яблоко", 80);
+        SimpleProduct product5 = new SimpleProduct("Кофе", 350);
+        DiscountedProduct product6 = new DiscountedProduct("Чай", 170, 10);
+
 
         ProductBasket basket = new ProductBasket();
 
@@ -21,6 +25,7 @@ public class App {
         basket.addProduct(product4);
         basket.addProduct(product5);
 
+
         // 2. Добавление продукта в заполненную корзину
         basket.addProduct(product6);
 
@@ -29,6 +34,8 @@ public class App {
 
         // 4. Получение стоимости корзины с несколькими товарами
         System.out.println("Общая стоимость: " + basket.getTotalPrice());
+        System.out.println("Есть ли сыр? " + basket.containsProduct("Сыр"));
+        System.out.println("Есть ли чай? " + basket.containsProduct("Чай"));
 
         // 5. Поиск товара, который есть в корзине
         System.out.println("Есть ли хлеб? " + basket.containsProduct("Хлеб"));
@@ -38,6 +45,9 @@ public class App {
 
         // 7. Очистка корзины
         basket.clear();
+        basket.printBasket();
+        System.out.println("Общая стоимость: " + basket.getTotalPrice());
+        System.out.println("Есть ли хлеб? " + basket.containsProduct("Хлеб"));
 
         // 8. Печать содержимого пустой корзины
         basket.printBasket();

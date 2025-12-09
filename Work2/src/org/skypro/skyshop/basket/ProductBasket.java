@@ -28,11 +28,17 @@ public class ProductBasket {
             return;
         }
         int total = 0;
+        int specialCount = 0;
         for (int i = 0; i < count; i++) {
-            System.out.println(products[i].getName() + ": " + products[i].getPrice());
+            Product product = products[i];
+            System.out.println(product.toString());
             total += products[i].getPrice();
+            if (product.isSpecial()) {
+                specialCount++;
+            }
         }
         System.out.println("Итого: " + total + " рублей");
+        System.out.println("Специальных товаров: " + specialCount);
     }
 
     public boolean containsProduct(String name) {
