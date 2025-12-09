@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3348e666-aee7-4ac1-ad62-275f7cf4e58e" name="Changes" comment="W1">
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/basket/ProductBasket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/Main.java" afterDir="false" />
+    <list default="true" id="3348e666-aee7-4ac1-ad62-275f7cf4e58e" name="Changes" comment="W2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,17 +23,25 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="MemoryJava" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ILYA-NSK73&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOQDskMM62IShC",
+        "number": 1
+      },
+      "lastSeen": 1764423062866
+    }
+  ]
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ILYA-NSK73/JavaCore.git&quot;,
@@ -56,7 +62,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "MemoryJava",
+    "git-widget-placeholder": "MemoryJava1",
     "onboarding.tips.debug.path": "C:/Users/Работа/Skypro/JavaCore/Work2/src/Main.java",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
@@ -85,12 +91,38 @@
       <option name="project" value="LOCAL" />
       <updated>1760623130733</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="W1">
+      <option name="closed" value="true" />
+      <created>1764422450558</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764422450558</updated>
+    </task>
+    <task id="LOCAL-00003" summary="W1">
+      <option name="closed" value="true" />
+      <created>1764422528544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764422528544</updated>
+    </task>
+    <task id="LOCAL-00004" summary="W2">
+      <option name="closed" value="true" />
+      <created>1764423577986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764423577986</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="ООП" />
     <MESSAGE value="W1" />
-    <option name="LAST_COMMIT_MESSAGE" value="W1" />
+    <MESSAGE value="W2" />
+    <option name="LAST_COMMIT_MESSAGE" value="W2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaCore$Main.ic" NAME="Main Coverage Results" MODIFIED="1764401596288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
