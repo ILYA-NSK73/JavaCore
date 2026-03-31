@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3348e666-aee7-4ac1-ad62-275f7cf4e58e" name="Changes" comment="W2">
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/DiscountedProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/FixPriceProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/SimpleProduct.java" afterDir="false" />
+    <list default="true" id="3348e666-aee7-4ac1-ad62-275f7cf4e58e" name="Changes" comment="JAVA2">
+      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/SearchEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/Searchable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Work2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/basket/ProductBasket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/basket/ProductBasket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Work2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Work2/org/skypro/skyshop/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Work2/org/skypro/skyshop/basket/ProductBasket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Work2/org/skypro/skyshop/product/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/SimpleProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/Work2/src/org/skypro/skyshop/product/SimpleProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MemoryJava1" />
+        <entry key="$PROJECT_DIR$" value="MemoryJava2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,6 +55,9 @@
     &quot;accountId&quot;: &quot;9db840aa-8792-4ba1-852d-782a8adf25ad&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -72,12 +72,12 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "MemoryJava2",
+    "git-widget-placeholder": "MemoryJava4",
     "onboarding.tips.debug.path": "C:/Users/Работа/Skypro/JavaCore/Work2/src/Main.java",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.customizations"
+    "settings.editor.selected.configurable": "copyright"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
@@ -85,7 +85,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.skypro.skyshop.App" />
       <module name="JavaCore" />
@@ -108,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

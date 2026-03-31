@@ -1,10 +1,9 @@
 package org.skypro.skyshop;
 
-import org.skypro.skyshop.product.FixPriceProduct;
+import org.skypro.skyshop.product.*;
 import org.skypro.skyshop.basket.ProductBasket;
-import org.skypro.skyshop.product.DiscountedProduct;
-import org.skypro.skyshop.product.SimpleProduct;
-import org.skypro.skyshop.product.Product;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -14,7 +13,6 @@ public class App {
         SimpleProduct product4 = new SimpleProduct("Яблоко", 80);
         SimpleProduct product5 = new SimpleProduct("Кофе", 350);
         DiscountedProduct product6 = new DiscountedProduct("Чай", 170, 10);
-
 
         ProductBasket basket = new ProductBasket();
 
@@ -57,5 +55,59 @@ public class App {
 
         // 10. Поиск товара по имени в пустой корзине
         System.out.println("Есть ли хлеб? " + basket.containsProduct("Хлеб"));
+
+        Product apple = new SimpleProduct("Яблоко ", 80);
+        Product milk = new SimpleProduct("Молоко ", 91);
+        Product cherry = new SimpleProduct("Вишня ", 60);
+        Product cheese = new SimpleProduct("Сыр ", 255);
+        Product tea = new SimpleProduct("Чай ", 170);
+
+        ProductBasket ProductBasket = new ProductBasket();
+        basket.addProduct(apple);
+        basket.addProduct(milk);
+        basket.addProduct(cherry);
+        basket.addProduct(cheese);
+        basket.addProduct(tea);
+
+        System.out.println("Содержимое корзины");
+        basket.printBasket();
+
+        Article article1 = new Article("Яблоки - ", "Привезены прямо с Юга России");
+        Article article2 = new Article("Наше молоко - ", " всегда свежее и вкусное! ");
+        Article article3 = new Article("Наши Вишни - ", " Привезены прямо с Эквадора");
+
+        SearchEngine engine = new SearchEngine(20);
+        engine.add(apple);
+        engine.add(milk);
+        engine.add(cherry);
+        engine.add(cheese);
+        engine.add(tea);
+
+        engine.add(article1);
+        engine.add(article2);
+        engine.add(article3);
+
+        System.out.println("Поиск по строке фрукты : " );
+        Searchable[] result1 = engine.search("Фрукты");
+        System.out.println(Arrays.toString(result1));
+
+        System.out.println("Поиск по строке овоищи : " );
+        Searchable[] result2 = engine.search("Овощи");
+        System.out.println(Arrays.toString(result2));
+
+        System.out.println("Поиск по строке чаи : " );
+        Searchable[] result3 = engine.search("Чаи");
+        System.out.println(Arrays.toString(result3));
+
+        System.out.println("Поиск по строке молочная продукция : " );
+        Searchable[] result4 = engine.search("Молочная продукция");
+        System.out.println(Arrays.toString(result4));
+
     }
-}
+
+    private static void printResults(SearchEngine engine, String query) {
+        Searchable[] results = engine.search(query);
+        System.out.println(Arrays.toString(results));
+
+            }
+        }
