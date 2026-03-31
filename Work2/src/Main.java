@@ -1,6 +1,9 @@
 import org.skypro.skyshop.basket.ProductBasket;
 import org.skypro.skyshop.product.Product;
 import org.skypro.skyshop.product.SimpleProduct;
+import org.skypro.skyshop.product.Article;
+import org.skypro.skyshop.product.Searchable;
+import org.skypro.skyshop.product.SearchEngine;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,5 +22,7 @@ public class Main {
         basket1.addProduct(product4);
         basket1.addProduct(product5);
 
+
     }
 }
+
