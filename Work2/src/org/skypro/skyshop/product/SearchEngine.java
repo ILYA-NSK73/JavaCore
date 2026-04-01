@@ -37,12 +37,6 @@ public class SearchEngine {
         return result;
     }
 
-    public class BestResultNotFound extends Exception {
-        public BestResultNotFound(String search) {
-            super("Лучший результат для запроса " + search + " не найден");
-        }
-    }
-
     public Searchable findBest(String search) throws BestResultNotFound {
         if (search == null || search.isEmpty()) {
             throw new BestResultNotFound(search);
