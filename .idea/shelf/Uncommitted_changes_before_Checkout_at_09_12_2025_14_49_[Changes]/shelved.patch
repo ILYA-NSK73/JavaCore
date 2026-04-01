@@ -1,0 +1,18 @@
+Index: Work2/src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//TIP To <b>Run</b> code, press <shortcut actionId=\"Run\"/> or\r\n// click the <icon src=\"AllIcons.Actions.Execute\"/> icon in the gutter.\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        System.out.printf(\"Hello and welcome!\");\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Work2/src/Main.java b/Work2/src/Main.java
+--- a/Work2/src/Main.java	(revision 80437376909469922c0135d966740cf164c71228)
++++ b/Work2/src/Main.java	(date 1765277279798)
+@@ -2,6 +2,6 @@
+ // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ public class Main {
+     public static void main(String[] args) {
+-        System.out.printf("Hello and welcome!");
++        System.out.printf("Hello and Skypro!");
+     }
+ }
