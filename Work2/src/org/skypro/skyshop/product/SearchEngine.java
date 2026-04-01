@@ -4,7 +4,7 @@ public class SearchEngine {
     private final Searchable[] items;
     private int size = 0;
 
-    public SearchEngine (int capacity) {
+    public SearchEngine(int capacity) {
         this.items = new Searchable[capacity];
     }
 
@@ -36,4 +36,57 @@ public class SearchEngine {
         }
         return result;
     }
+
+    public class BestResultNotFound extends Exception {
+        public BestResultNotFound(String search) {
+            super("Лучший результат для запроса " + search + " не найден");
+        }
+    }
+
+    public Searchable findBest(String search) throws BestResultNotFound {
+        if (search == null || search.isEmpty()) {
+            throw new BestResultNotFound(search);
+        }
+
+        Searchable best = null;
+        int bestCount = 0;
+
+        for (int i = 0; i < size; i++) {
+            Searchable item = items[i];
+            if (item == null) {
+                continue;
+            }
+
+            String term = item.getSearchTerm();
+            if (term == null || term.isEmpty()) {
+                continue;
+            }
+
+            int count = countOccurrences(term, search);
+            if (count > bestCount) {
+                bestCount = count;
+                best = item;
+            }
+        }
+
+        if (best == null || bestCount == 0) {
+            throw new BestResultNotFound(search);
+        }
+
+        return best;
+    }
+
+    private int countOccurrences(String text, String substring) {
+        int count = 0;
+        int index = 0;
+
+        int pos = text.indexOf(substring, index);
+        while (pos != -1) {
+            count++;
+            index = pos + substring.length();
+            pos = text.indexOf(substring, index);
+        }
+        return count;
+    }
 }
+

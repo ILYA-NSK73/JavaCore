@@ -56,58 +56,83 @@ public class App {
         // 10. Поиск товара по имени в пустой корзине
         System.out.println("Есть ли хлеб? " + basket.containsProduct("Хлеб"));
 
-        Product apple = new SimpleProduct("Яблоко ", 80);
-        Product milk = new SimpleProduct("Молоко ", 91);
-        Product cherry = new SimpleProduct("Вишня ", 60);
-        Product cheese = new SimpleProduct("Сыр ", 255);
-        Product tea = new SimpleProduct("Чай ", 170);
+        System.out.println("=== Проверка конструкторов продуктов ===");
+        try {
+            Product badName = new SimpleProduct("   ", 100);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка при создании продукта: " + e.getMessage());
+        }
 
-        ProductBasket ProductBasket = new ProductBasket();
-        basket.addProduct(apple);
-        basket.addProduct(milk);
-        basket.addProduct(cherry);
-        basket.addProduct(cheese);
-        basket.addProduct(tea);
+        try {
+            Product badPrice = new SimpleProduct("Хлеб", 0);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка при создании продукта: " + e.getMessage());
+        }
 
-        System.out.println("Содержимое корзины");
-        basket.printBasket();
+        try {
+            Product badBasePrice = new DiscountedProduct("Молоко", -1000, 10);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка при создании продукта: " + e.getMessage());
+        }
 
-        Article article1 = new Article("Яблоки - ", "Привезены прямо с Юга России");
-        Article article2 = new Article("Наше молоко - ", " всегда свежее и вкусное! ");
-        Article article3 = new Article("Наши Вишни - ", " Привезены прямо с Эквадора");
+        try {
+            Product badDiscount = new DiscountedProduct("Молоко", 20000, 150);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка при создании продукта: " + e.getMessage());
 
-        SearchEngine engine = new SearchEngine(20);
-        engine.add(apple);
-        engine.add(milk);
-        engine.add(cherry);
-        engine.add(cheese);
-        engine.add(tea);
+            Product apple = new SimpleProduct("Яблоко ", 80);
+            Product milk = new SimpleProduct("Молоко ", 91);
+            Product cherry = new SimpleProduct("Вишня ", 60);
+            Product cheese = new SimpleProduct("Сыр ", 255);
+            Product tea = new SimpleProduct("Чай ", 170);
 
-        engine.add(article1);
-        engine.add(article2);
-        engine.add(article3);
 
-        System.out.println("Поиск по строке фрукты : " );
-        Searchable[] result1 = engine.search("Фрукты");
-        System.out.println(Arrays.toString(result1));
+            ProductBasket ProductBasket = new ProductBasket();
+            basket.addProduct(apple);
+            basket.addProduct(milk);
+            basket.addProduct(cherry);
+            basket.addProduct(cheese);
+            basket.addProduct(tea);
 
-        System.out.println("Поиск по строке овоищи : " );
-        Searchable[] result2 = engine.search("Овощи");
-        System.out.println(Arrays.toString(result2));
+            System.out.println("Содержимое корзины");
+            basket.printBasket();
 
-        System.out.println("Поиск по строке чаи : " );
-        Searchable[] result3 = engine.search("Чаи");
-        System.out.println(Arrays.toString(result3));
+            Article article1 = new Article("Яблоки - ", "Привезены прямо с Юга России");
+            Article article2 = new Article("Наше молоко - ", " всегда свежее и вкусное! ");
+            Article article3 = new Article("Наши Вишни - ", " Привезены прямо с Эквадора");
 
-        System.out.println("Поиск по строке молочная продукция : " );
-        Searchable[] result4 = engine.search("Молочная продукция");
-        System.out.println(Arrays.toString(result4));
+            SearchEngine engine = new SearchEngine(20);
+            engine.add(apple);
+            engine.add(milk);
+            engine.add(cherry);
+            engine.add(cheese);
+            engine.add(tea);
 
+            engine.add(article1);
+            engine.add(article2);
+            engine.add(article3);
+
+            System.out.println("Поиск по строке фрукты : ");
+            Searchable[] result1 = engine.search("Фрукты");
+            System.out.println(Arrays.toString(result1));
+
+            System.out.println("Поиск по строке овоищи : ");
+            Searchable[] result2 = engine.search("Овощи");
+            System.out.println(Arrays.toString(result2));
+
+            System.out.println("Поиск по строке чаи : ");
+            Searchable[] result3 = engine.search("Чаи");
+            System.out.println(Arrays.toString(result3));
+
+            System.out.println("Поиск по строке молочная продукция : ");
+            Searchable[] result4 = engine.search("Молочная продукция");
+            System.out.println(Arrays.toString(result4));
+        }
     }
+
 
     private static void printResults(SearchEngine engine, String query) {
         Searchable[] results = engine.search(query);
         System.out.println(Arrays.toString(results));
-
-            }
-        }
+    }
+}
